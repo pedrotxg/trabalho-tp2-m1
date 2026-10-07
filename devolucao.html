@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Devolução</title>
+</head>
+<body>
+  <menutpi2>
+    <nav>
+      <a href="index.html">Início</a> |
+      <a href="leitor.html">Leitor</a> |
+      <a href="livro.html">Livro</a> |
+      <a href="emprestimo.html">Empréstimo</a> |
+      <a href="devolucao.html">Devolução</a> |
+      <a href="reserva.html">Reserva</a>
+    </nav>
+  </menutpi2>
+
+  <h1>Registro de Devolução</h1>
+  <form action="devolucao.php" method="post">
+    <tpi2>
+      <p><label>Código do empréstimo: <input type="number" name="codigo_emprestimo"></label></p>
+      <p><label>Data da devolução: <input type="date" name="data_devolucao"></label></p>
+      <p><label>Estado do livro:
+        <select name="estado_livro">
+          <option value="">Selecione</option>
+          <option value="bom">Bom</option>
+          <option value="danificado">Danificado</option>
+          <option value="perdido">Perdido</option>
+        </select>
+      </label></p>
+      <p><label>Forma de pagamento da multa:
+        <select name="forma_pagamento_multa">
+          <option value="">Selecione</option>
+          <option value="dinheiro">Dinheiro</option>
+          <option value="pix">Pix</option>
+          <option value="cartao">Cartão</option>
+          <option value="a_pagar_depois">A pagar depois</option>
+        </select>
+      </label></p>
+      <p><label>Observações (opcional):<br><textarea name="observacoes" rows="3" cols="30"></textarea></label></p>
+      <p><button type="submit">Registrar devolução</button></p>
+    </tpi2>
+  </form>
+  <div id="resultado"></div>
+
+  <h2>Empréstimos</h2>
+  <table border="1" cellpadding="4">
+    <tr><th>Código</th><th>Leitor</th><th>Livro</th><th>Data</th><th>Prevista</th><th>Devolução</th><th>Status</th></tr>
+    <tr><td>1</td><td>Rafaela Nogueira</td><td>Dom Casmurro</td><td>01/10/2026</td><td>15/10/2026</td><td>-</td><td>Ativo</td></tr>
+    <tr><td>2</td><td>Rafaela Nogueira</td><td>O Pequeno Príncipe</td><td>01/10/2026</td><td>15/10/2026</td><td>-</td><td>Ativo</td></tr>
+    <tr><td>3</td><td>Rafaela Nogueira</td><td>Capitães da Areia</td><td>01/10/2026</td><td>15/10/2026</td><td>-</td><td>Ativo</td></tr>
+    <tr><td>4</td><td>Sarah Gontijo</td><td>Vidas Secas</td><td>01/08/2026</td><td>15/08/2026</td><td>22/08/2026</td><td>Devolvido</td></tr>
+    <tr><td>5</td><td>Pedro Teixeira</td><td>Vidas Secas</td><td>01/09/2026</td><td>15/09/2026</td><td>-</td><td>Ativo</td></tr>
+  </table>
+
+  <h2>Multas</h2>
+  <table border="1" cellpadding="4">
+    <tr><th>ID</th><th>Empréstimo</th><th>Leitor</th><th>Dias de atraso</th><th>Valor (R$)</th><th>Status</th></tr>
+    <tr><td>1</td><td>4</td><td>Sarah Gontijo</td><td>7</td><td>3,50</td><td>Pendente</td></tr>
+  </table>
+
+  <p><a href="index.html">Voltar à página inicial</a></p>
+  <script src="enviar.js"></script>
+</body>
+</html>

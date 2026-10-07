@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Reserva de Livro</title>
+</head>
+<body>
+  <menutpi2>
+    <nav>
+      <a href="index.html">Início</a> |
+      <a href="leitor.html">Leitor</a> |
+      <a href="livro.html">Livro</a> |
+      <a href="emprestimo.html">Empréstimo</a> |
+      <a href="devolucao.html">Devolução</a> |
+      <a href="reserva.html">Reserva</a>
+    </nav>
+  </menutpi2>
+
+  <h1>Reserva de Livro</h1>
+  <form action="reserva.php" method="post">
+    <tpi2>
+      <p><label>CPF do leitor: <input type="text" name="cpf_leitor"></label></p>
+      <p><label>ISBN do livro: <input type="text" name="isbn_livro"></label></p>
+      <p><label>Data da reserva: <input type="date" name="data_reserva"></label></p>
+      <p><label>Prioridade:
+        <select name="prioridade">
+          <option value="">Selecione</option>
+          <option value="normal">Normal</option>
+          <option value="alta">Alta</option>
+        </select>
+      </label></p>
+      <p><label>Observações (opcional):<br><textarea name="observacoes" rows="3" cols="30"></textarea></label></p>
+      <p><button type="submit">Reservar</button></p>
+    </tpi2>
+  </form>
+  <div id="resultado"></div>
+
+  <h2>Reservas</h2>
+  <table border="1" cellpadding="4">
+    <tr><th>ID</th><th>Leitor</th><th>Livro</th><th>Data</th><th>Status</th></tr>
+    <tr><td>1</td><td>Rafaela Nogueira</td><td>Capitães da Areia</td><td>02/10/2026</td><td>Ativa</td></tr>
+  </table>
+
+  <h2>Leitores cadastrados</h2>
+  <table border="1" cellpadding="4">
+    <tr><th>ID</th><th>Nome</th><th>CPF</th><th>E-mail</th><th>Nascimento</th><th>Tipo</th></tr>
+    <tr><td>1</td><td>Pedro Teixeira</td><td>11122233344</td><td>pedroteixeira@escola.com</td><td>21/12/2002</td><td>Aluno</td></tr>
+    <tr><td>2</td><td>Rafaela Nogueira</td><td>22233344455</td><td>rafaelanogueira@escola.com</td><td>01/08/2001</td><td>Aluno</td></tr>
+    <tr><td>3</td><td>Sarah Gontijo</td><td>33344455566</td><td>sarahgontijo@escola.com</td><td>09/01/1985</td><td>Professor</td></tr>
+  </table>
+
+  <h2>Livros do acervo</h2>
+  <table border="1" cellpadding="4">
+    <tr><th>ID</th><th>Título</th><th>ISBN</th><th>Autor</th><th>Categoria</th><th>Total</th><th>Disponíveis</th></tr>
+    <tr><td>1</td><td>Dom Casmurro</td><td>9788501000011</td><td>Machado de Assis</td><td>Romance</td><td>3</td><td>2</td></tr>
+    <tr><td>2</td><td>O Pequeno Príncipe</td><td>9788501000028</td><td>Antoine de Saint-Exupéry</td><td>Infantojuvenil</td><td>2</td><td>1</td></tr>
+    <tr><td>3</td><td>Capitães da Areia</td><td>9788501000035</td><td>Jorge Amado</td><td>Romance</td><td>1</td><td>0</td></tr>
+    <tr><td>4</td><td>Vidas Secas</td><td>9788501000042</td><td>Graciliano Ramos</td><td>Romance</td><td>2</td><td>1</td></tr>
+  </table>
+
+  <p><a href="index.html">Voltar à página inicial</a></p>
+  <script src="enviar.js"></script>
+</body>
+</html>

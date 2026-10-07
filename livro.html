@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Livro</title>
+</head>
+<body>
+  <menutpi2>
+    <nav>
+      <a href="index.html">Início</a> |
+      <a href="leitor.html">Leitor</a> |
+      <a href="livro.html">Livro</a> |
+      <a href="emprestimo.html">Empréstimo</a> |
+      <a href="devolucao.html">Devolução</a> |
+      <a href="reserva.html">Reserva</a>
+    </nav>
+  </menutpi2>
+
+  <h1>Cadastro de Livro</h1>
+  <form action="livro.php" method="post">
+    <tpi2>
+      <p><label>Título: <input type="text" name="titulo"></label></p>
+      <p><label>ISBN (10 ou 13 dígitos): <input type="text" name="isbn"></label></p>
+      <p><label>Autor:
+        <select name="autor">
+          <option value="">Selecione</option>
+          <option value="Machado de Assis">Machado de Assis</option>
+          <option value="Jorge Amado">Jorge Amado</option>
+          <option value="Graciliano Ramos">Graciliano Ramos</option>
+          <option value="Clarice Lispector">Clarice Lispector</option>
+        </select>
+      </label></p>
+      <p><label>Categoria:
+        <select name="categoria">
+          <option value="">Selecione</option>
+          <option value="Romance">Romance</option>
+          <option value="Infantojuvenil">Infantojuvenil</option>
+          <option value="Didático">Didático</option>
+          <option value="Poesia">Poesia</option>
+        </select>
+      </label></p>
+      <p><label>Editora: <input type="text" name="editora"></label></p>
+      <p><label>Ano de publicação: <input type="number" name="ano_publicacao"></label></p>
+      <p><label>Quantidade de exemplares: <input type="number" name="exemplares"></label></p>
+      <p><button type="submit">Cadastrar</button></p>
+    </tpi2>
+  </form>
+  <div id="resultado"></div>
+
+  <h2>Livros do acervo</h2>
+  <table border="1" cellpadding="4">
+    <tr><th>ID</th><th>Título</th><th>ISBN</th><th>Autor</th><th>Categoria</th><th>Total</th><th>Disponíveis</th></tr>
+    <tr><td>1</td><td>Dom Casmurro</td><td>9788501000011</td><td>Machado de Assis</td><td>Romance</td><td>3</td><td>2</td></tr>
+    <tr><td>2</td><td>O Pequeno Príncipe</td><td>9788501000028</td><td>Antoine de Saint-Exupéry</td><td>Infantojuvenil</td><td>2</td><td>1</td></tr>
+    <tr><td>3</td><td>Capitães da Areia</td><td>9788501000035</td><td>Jorge Amado</td><td>Romance</td><td>1</td><td>0</td></tr>
+    <tr><td>4</td><td>Vidas Secas</td><td>9788501000042</td><td>Graciliano Ramos</td><td>Romance</td><td>2</td><td>1</td></tr>
+  </table>
+
+  <p><a href="index.html">Voltar à página inicial</a></p>
+  <script src="enviar.js"></script>
+</body>
+</html>

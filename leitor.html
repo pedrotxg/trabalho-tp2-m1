@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Leitor</title>
+</head>
+<body>
+  <menutpi2>
+    <nav>
+      <a href="index.html">Início</a> |
+      <a href="leitor.html">Leitor</a> |
+      <a href="livro.html">Livro</a> |
+      <a href="emprestimo.html">Empréstimo</a> |
+      <a href="devolucao.html">Devolução</a> |
+      <a href="reserva.html">Reserva</a>
+    </nav>
+  </menutpi2>
+
+  <h1>Cadastro de Leitor</h1>
+  <form action="leitor.php" method="post">
+    <tpi2>
+      <p><label>Nome: <input type="text" name="nome"></label></p>
+      <p><label>CPF (somente números): <input type="text" name="cpf"></label></p>
+      <p><label>E-mail: <input type="text" name="email"></label></p>
+      <p><label>Telefone: <input type="text" name="telefone"></label></p>
+      <p><label>Data de nascimento: <input type="date" name="nascimento"></label></p>
+      <p><label>Tipo:
+        <select name="tipo">
+          <option value="">Selecione</option>
+          <option value="aluno">Aluno</option>
+          <option value="professor">Professor</option>
+          <option value="funcionario">Funcionário</option>
+        </select>
+      </label></p>
+      <p><button type="submit">Cadastrar</button></p>
+    </tpi2>
+  </form>
+  <div id="resultado"></div>
+
+  <h2>Leitores cadastrados</h2>
+  <table border="1" cellpadding="4">
+    <tr><th>ID</th><th>Nome</th><th>CPF</th><th>E-mail</th><th>Nascimento</th><th>Tipo</th></tr>
+    <tr><td>1</td><td>Pedro Teixeira</td><td>11122233344</td><td>pedroteixeira@escola.com</td><td>21/12/2002</td><td>Aluno</td></tr>
+    <tr><td>2</td><td>Rafaela Nogueira</td><td>22233344455</td><td>rafaelanogueira@escola.com</td><td>01/08/2001</td><td>Aluno</td></tr>
+    <tr><td>3</td><td>Sarah Gontijo</td><td>33344455566</td><td>sarahgontijo@escola.com</td><td>09/01/1985</td><td>Professor</td></tr>
+  </table>
+
+  <p><a href="index.html">Voltar à página inicial</a></p>
+  <script src="enviar.js"></script>
+</body>
+</html>
